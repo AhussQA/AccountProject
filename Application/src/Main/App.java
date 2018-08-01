@@ -1,3 +1,4 @@
+package Main;
 
 public class App {
 	public static void main(String[] args) {
@@ -9,8 +10,8 @@ public class App {
 		AccountService.addAccount(a1);
 		AccountService.removeAccount(a2);
 		AccountService.addAccount(a2);
-//		AccountService.removeAccount(a2);
-//		AccountService.addAccount(a1);
+		AccountService.removeAccount(a2);
+		AccountService.addAccount(a1);
 
 		AccountService.mapToJson();
 		
