@@ -1,6 +1,8 @@
 import java.util.HashMap;
 import java.util.Map;
 
+import org.json.JSONObject;
+
 public class AccountService {
 	private static Map<Integer, Account> accountMap = new HashMap<>();
 
@@ -37,4 +39,8 @@ public class AccountService {
 		return success;
 	}
 
+	public static void mapToJson() {
+		JSONObject jsonObject = new JSONObject(accountMap);
+		System.out.println(jsonObject);
+	}
 }
