@@ -1,7 +1,8 @@
-package Main;
+package main;
 
 public class Account {
-	String firstName,lastName;
+	String firstName;
+	String lastName;
 	Integer accountNumber;
 	
 	public Account(String firstName,String lastName,Integer accountNumber){
