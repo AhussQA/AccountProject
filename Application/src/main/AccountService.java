@@ -70,7 +70,7 @@ public class AccountService {
 		while (iterator.hasNext()) {
 			Integer integer = iterator.next();
 			Account account = accountMap.get(integer);
-			if (account.getAccountNumber().equals(firstName)) {
+			if (account.getFirstName().equals(firstName)) {
 				numberOfAccounts++;
 			}
 		}

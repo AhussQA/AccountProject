@@ -22,10 +22,10 @@ public class Feature3Test {
 		AccountService.addAccount(a1);
 		AccountService.addAccount(a2);
 		AccountService.addAccount(a3);
-		AccountService.addAccount(a4);
+		AccountService.addAccount(a4); 
 
 		List<Account> accounts = AccountService.getAccountsByName("J");
-		assertEquals("Not the same",2,accounts.size());
+		assertEquals("Not the same size",2,accounts.size());
 		assertEquals("Not the same",2,AccountService.getNumberOfAccounts("J"));
 
 		

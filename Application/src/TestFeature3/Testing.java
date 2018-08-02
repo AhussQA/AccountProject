@@ -1,7 +1,10 @@
-package main;
+package TestFeature3;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import main.Account;
+import main.AccountService;
 
 public class Testing {
 	@Test
@@ -14,7 +17,7 @@ public class Testing {
 
 		AccountService.addAccount(a1);
 		
-		assertTrue(AccountService.removeAccount(a1.accountNumber));
+		assertTrue(AccountService.removeAccount(a1.getAccountNumber()));
 		
 		
 		a1.setFirstName("Jo");
