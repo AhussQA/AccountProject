@@ -13,8 +13,8 @@ public class AccountService {
 
 	public static boolean addAccount(Account account) {
 		boolean success = false;
-		if (!accountMap.containsKey(account.accountNumber)) {
-			accountMap.put(account.accountNumber, account);
+		if (!accountMap.containsKey(account.getAccountNumber())) {
+			accountMap.put(account.getAccountNumber(), account);
 			success = true;
 		} else {
 			success = false;
@@ -24,8 +24,8 @@ public class AccountService {
 
 	public static boolean removeAccount(Account account) {
 		boolean success = false;
-		if (accountMap.containsKey(account.accountNumber)) {
-			accountMap.remove(account.accountNumber);
+		if (accountMap.containsKey(account.getAccountNumber())) {
+			accountMap.remove(account.getAccountNumber());
 			success = true;
 		} else {
 			success = false;
@@ -56,7 +56,7 @@ public class AccountService {
 		while (iterator.hasNext()) {
 			Integer integer = iterator.next();
 			Account account = accountMap.get(integer);
-			if (account.firstName.equals(name)) {
+			if (account.getFirstName().equalsIgnoreCase(name)) {
 				accounts.add(account);
 			}
 
@@ -70,7 +70,7 @@ public class AccountService {
 		while (iterator.hasNext()) {
 			Integer integer = iterator.next();
 			Account account = accountMap.get(integer);
-			if (account.firstName.equals(firstName)) {
+			if (account.getAccountNumber().equals(firstName)) {
 				numberOfAccounts++;
 			}
 		}

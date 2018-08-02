@@ -1,9 +1,9 @@
 package main;
 
 public class Account {
-	String firstName;
-	String lastName;
-	Integer accountNumber;
+	private String firstName;
+	private String lastName;
+	private Integer accountNumber;
 	
 	public Account(String firstName,String lastName,Integer accountNumber){
 		this.firstName = firstName;
