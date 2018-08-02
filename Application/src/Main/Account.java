@@ -33,6 +33,11 @@ public class Account {
 	public void setAccountNumber(Integer accountNumber) {
 		this.accountNumber = accountNumber;
 	}
+
+	@Override
+	public String toString() {
+		return "Account [firstName=" + firstName + ", lastName=" + lastName + ", accountNumber=" + accountNumber + "]";
+	}
 	
 	
 	

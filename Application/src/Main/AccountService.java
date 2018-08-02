@@ -57,7 +57,21 @@ public class AccountService {
 			if(account.firstName.equals(name)) {
 				accounts.add(account);
 			}
+			
 		}
 		return accounts;
+	}
+	
+	public static int getNumberOfAccounts(String firstName) {
+		int numberOfAccounts=0;
+		Iterator<Integer> iterator = accountMap.keySet().iterator();
+		while (iterator.hasNext()) {
+			Integer integer = (Integer) iterator.next();
+			Account account = accountMap.get(integer);
+			if(account.firstName.equals(firstName)) {
+				numberOfAccounts++;
+			}
+		}
+		return numberOfAccounts;
 	}
 }
